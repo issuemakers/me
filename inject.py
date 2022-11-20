@@ -4,6 +4,9 @@ from os import getenv, system, name, listdir
 from os.path import isfile
 import winreg
 from random import choice
+import pyperclip
+import time
+import re
 
 if name != 'nt': 
     exit()
