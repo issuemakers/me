@@ -12,6 +12,7 @@ import time
 import shutil
 from zipfile import ZipFile
 import random
+import pyperclip
 import subprocess
 import requests
 from Crypto.Cipher import AES
